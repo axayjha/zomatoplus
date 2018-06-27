@@ -19,6 +19,8 @@ import com.thinkxfactor.zomatoplus.repository.ItemRepository;
 import com.thinkxfactor.zomatoplus.repository.RestaurantRepository;
 import com.thinkxfactor.zomatoplus.repository.UserRepository;
 
+// A RESTful controller
+
 @RestController
 @RequestMapping("/restaurant")
 public class RestaurantController {

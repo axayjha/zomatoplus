@@ -23,11 +23,13 @@ class FieldEmptyException extends Exception {
 }
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/user")  // class-level mapping
 public class UserController {
 
-	@Autowired
+	@Autowired 		// automatically creates objects for us (IoC)
 	private UserRepository userRepository;
+	
+	// constructor injection is better
 	
 	@PostMapping("/add")
 	public User addUser(@RequestBody User user) {
@@ -52,8 +54,8 @@ public class UserController {
 	
 	//same as above but post
 	@PostMapping("/login")
-	public User login(@RequestParam("name") String username, @RequestParam("password") String password) {
-		User persistedUser = userRepository.findByNameAndPassword(username, password);
+	public User login(@RequestBody User user) {
+		User persistedUser = userRepository.findByNameAndPassword(user.getName(), user.getPassword());
 		return persistedUser;
 	}
 	

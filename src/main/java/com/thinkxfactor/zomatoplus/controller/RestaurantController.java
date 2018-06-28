@@ -59,20 +59,20 @@ public class RestaurantController {
 	
 	
 	
-//	@PostMapping("/create")
-//	public Restaurant restaurantCreate(@RequestBody Restaurant restaurant) {
-//		System.out.println(restaurant.toString());
-//		//restaurants.add(restaurant);
-//		return restaurant;
-//	}
-//	
-//	@GetMapping("/getall")
-//	public List<Restaurant> restaurantList() {
-//		List<Restaurant> restaurants = new ArrayList<>();
-//
-//		restaurants.add(new Restaurant(1,"sd","d","ds",23,32,"asd"));
-//		return restaurants;
-//	}
+	@PostMapping("/create")
+	public Restaurant restaurantCreate(@RequestBody Restaurant restaurant) {
+		System.out.println(restaurant.toString());
+		//restaurants.add(restaurant);
+		return restaurant;
+	}
+	
+	@GetMapping("/getall1")
+	public List<Restaurant> restaurantList() {
+		List<Restaurant> restaurants = new ArrayList<>();
+
+		restaurants.add(new Restaurant(1,"sd","d","ds",23,32,"asd"));
+		return restaurants;
+	}
 //	
 //	@PostMapping("/additems")
 //

@@ -75,7 +75,7 @@ app.controller("itemsCtrl", function($scope, $http) {
 			url : 'http://localhost:8080/restaurant/addItem',
 			headers : {'Content-Type' : 'application/json' },
 			data : $scope.item
-		}).success(function(data, succes) {
+		}).success(function(data, status) {
 			console.log(data);
 			$scope.fetchItem();
 			$scope.items = data;

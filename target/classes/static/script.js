@@ -58,7 +58,7 @@ app.controller("itemsCtrl", function($scope, $http) {
 	$scope.fetchItem = function() {
 		$http({
 			method : 'GET',
-			url : 'http://localhost:8080/item/getAllItem'
+			url : 'http://localhost:8080/restaurant/getAllItem'
 		}).success(function(data, status) {
 			console.log(data);
 			$scope.status = status;
@@ -72,7 +72,7 @@ app.controller("itemsCtrl", function($scope, $http) {
 	$scope.saveItem = function() {
 		$http({
 			method : 'POST',
-			url : 'http://localhost:8080/item/addItem',
+			url : 'http://localhost:8080/restaurant/addItem',
 			headers : {'Content-Type' : 'application/json' },
 			data : $scope.item
 		}).success(function(data, succes) {
